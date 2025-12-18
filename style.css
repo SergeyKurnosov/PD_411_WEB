@@ -24,6 +24,14 @@ figure{
     font-weight:100;
 }
 
+ol{
+    list-style:upper-roman;
+}
+
+ul{
+    list-style:georgian;
+}
+
 
 
 

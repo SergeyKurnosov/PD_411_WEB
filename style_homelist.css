@@ -1,0 +1,9 @@
+﻿body {
+    font-family:'Sans Serif Collection';
+    line-height:1.2;
+}
+
+ol {
+    list-style: lower-alpha;
+    color:black;
+}
