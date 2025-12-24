@@ -1,0 +1,96 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    font-size: 24px;
+    font-family: 'Roboto Condensed';
+    font-weight: 300;
+    /*    background-image: url(https://img.freepik.com/free-vector/circuit-board-seamless-pattern_98292-3920.jpg?semt=ais_hybrid&w=740&q=80);
+    background-attachment:fixed;
+    color:black;*/
+    background-image: linear-gradient(to bottom right, lightskyblue, pink);
+    background-attachment: fixed;
+    /*height: 90vh;*/ /*Viiewport Height*/
+}
+
+h3 {
+    font-style: italic;
+    text-decoration: underline;
+}
+
+p {
+    /*name:value;*/
+    text-align: justify;
+    text-indent: 32px;
+    /*font-size: 24px;*/
+}
+
+figure {
+    text-align: center;
+    font-style: italic;
+    font-weight: 100;
+}
+
+ol {
+    list-style: upper-roman;
+}
+
+ul {
+    list-style: georgian;
+}
+
+a {
+    color: darkgreen;
+    /* padding:4px;*/
+}
+
+    a:visited {
+        color: blue;
+    }
+
+    a:hover {
+        font-weight: 800;
+        /*font-size: 32px;*/
+       /* padding: 0;*/
+        color: black;
+    }
+
+/*li {
+    padding: 4px;
+}
+
+    li:hover {
+        padding: 0px;
+    }*/
+/*.table-of-contents, #table-of-contents 
+{
+    background-image: linear-gradient(to bottom right, darkgreen, lightblue)
+}*/
+.header
+{
+    text-shadow:5px 5px 8px grey;
+
+}
+#table-of-contents > li > a, #table-of-contents > li > a:visited {
+    font-weight: 700;
+}
+#table-of-contents > li > ul > li > a, #table-of-contents > li > ul > li > a:visited {
+    font-weight: 500;
+}
+
+/*ul > li + li
+{
+    background-color: red;
+}*/
+
+table
+{
+    margin:0 auto;
+    border:solid 2px;
+    border-spacing:0;
+
+}
+th, td
+{
+    border:solid 1px;
+}
+

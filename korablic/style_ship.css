@@ -1,0 +1,44 @@
+﻿body
+{
+}
+
+table {
+    /*    margin: 0 auto;
+    border: solid 2px;
+    border-spacing: 0;*/
+    border:2px;
+    background-color:aqua;
+}
+
+td {
+    background-color:aqua;
+    border: solid 1px;
+    border-color: gray;
+    width: 150px;
+    height: 48px;
+}
+
+.sea
+{
+    background-color:blue;
+}
+
+.ship
+{
+    background-color:saddlebrown;
+}
+
+.deck
+{
+    background-color:darkolivegreen;
+}
+
+.sail
+{
+    background-color:red;
+}
+
+.sun
+{
+    background-color:yellow;
+}
