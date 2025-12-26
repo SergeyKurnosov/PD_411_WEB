@@ -50,7 +50,7 @@ a {
     a:hover {
         font-weight: 800;
         /*font-size: 32px;*/
-       /* padding: 0;*/
+        /* padding: 0;*/
         color: black;
     }
 
@@ -65,14 +65,14 @@ a {
 {
     background-image: linear-gradient(to bottom right, darkgreen, lightblue)
 }*/
-.header
-{
-    text-shadow:5px 5px 8px grey;
-
+.header {
+    text-shadow: 5px 5px 8px grey;
 }
+
 #table-of-contents > li > a, #table-of-contents > li > a:visited {
     font-weight: 700;
 }
+
 #table-of-contents > li > ul > li > a, #table-of-contents > li > ul > li > a:visited {
     font-weight: 500;
 }
@@ -82,15 +82,50 @@ a {
     background-color: red;
 }*/
 
-table
-{
-    margin:0 auto;
-    border:solid 2px;
-    border-spacing:0;
-
-}
-th, td
-{
-    border:solid 1px;
+#margin-and-padding {
+    border: solid 1px;
+    /*margin: 20px 50px 150px 250px;*/
+    margin: 20px 30px 50px;
+    padding: 50px 0px;
 }
 
+table {
+    margin: 15px auto;
+    border: solid 2px;
+    border-spacing: 0;
+    box-shadow: 0px -10px 25px 25px grey;
+}
+
+    table:hover > caption {
+        color: white;
+    }
+
+tr:hover {
+    box-shadow: inset 0px -3px 10px 1px orange;
+}
+
+th, td {
+    border: solid 1px;
+}
+
+/*th
+{
+    padding:15px 25px;
+    background-color:blueviolet;
+    color:aliceblue;
+}*/
+
+thead th {
+    border: solid 1px black;
+    padding: 15px 25px;
+    background-color: blueviolet;
+    color: aliceblue;
+}
+
+tbody th {
+    text-align: left;
+}
+
+td {
+    text-align: center;
+}

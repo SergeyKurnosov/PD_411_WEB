@@ -1,0 +1,60 @@
+﻿body {
+}
+
+td {
+    border: solid 1px black;
+    background-color: antiquewhite;
+    width: 150px;
+    height: 60px;
+    padding: 2px ;
+}
+
+.green
+{
+    background-color:forestgreen;
+}
+.blue
+{
+    background-color:steelblue;
+}
+.pink {
+    background-color: darkmagenta;
+}
+
+.yelow {
+    background-color: khaki;
+}
+
+
+.lant-act-title {
+    width: 40px;
+    font-size: 11px;
+    font-weight: 700;
+    text-align:center;
+}
+
+    .lant-act-title div {
+        transform: rotate(270deg);
+        word-break: break-word;
+    }
+
+
+h2 {
+    margin: 0px;
+    text-align:right;
+}
+
+p {
+    margin: 0px;
+    text-align:justify-all;
+}
+
+br
+{
+    margin:0px;
+}
+
+.num
+{
+    text-align:center;
+}
