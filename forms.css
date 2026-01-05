@@ -4,7 +4,7 @@
 
 form
 {
-    width:25%;
+    width:50%;
 }
 
 form > div
@@ -12,4 +12,23 @@ form > div
     text-align:right;
     border:solid 1px;
     margin:10px;
+}
+
+select
+{
+    width:100%;
+    margin:15px 0px;
+}
+
+option:disabled
+/*select:first-child*/
+{
+    text-align:center;
+}
+.eula
+{
+    width:91%;
+    height:300px;
+    overflow:scroll;
+    padding:15px;
 }
