@@ -1,12 +1,18 @@
-﻿body {
+﻿@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Tiny5&display=swap');
+
+body {
     background-image: url("bliss.jpg");
     background-size: cover;
-    font-family: Tahoma;
+    font-family: "Tiny5";
     text-shadow: 1px 1px black;
 }
 
+div {
+    font-family: "Tiny5";
+}
+
 .main-window {
-    border: solid 1px;
+    border: solid 3px;
     width: 400px;
     height: 360px;
     position: absolute;
@@ -14,6 +20,7 @@
     top: 25px;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
+    border-color:blue;
 }
 
 .title-bar {
@@ -23,25 +30,35 @@
     border-top-left-radius: 7px;
     border-top-right-radius: 7px;
     color: white;
-
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.title-bar-left-side
-{
-    display:flex;
+.title-bar-left-side {
+    display: flex;
 }
+
+    .title-bar-left-side button {
+        margin-top: 5px;
+        background-color: transparent;
+        width: 55px;
+        border: none;
+    }
 
 #app-icon {
     width: 24px;
     height: 24px;
 }
 
-.title-bar  button {
+.title-bar button {
+    background-color: transparent;
     width: 24px;
     height: 24px;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
@@ -49,4 +66,50 @@
     background-color: rgb(235,233,216);
     width: 100%;
     height: 322px;
+}
+
+.button-control {
+    width: 26px;
+    height: 26px;
+}
+
+hr {
+    border-top: 2px solid white;
+}
+
+input {
+    font-family: "Tiny5";
+    height: 25px;
+    font-size: 20px;
+    width: 90%;
+    text-align: end;
+    border: 2px solid cadetblue;
+    margin-left: 15px;
+}
+
+table {
+    width: 90%;
+    margin-left: 23px;
+}
+
+td {
+    padding: 0;
+    height: 45px;
+    width: 45px;
+}
+
+    td button {
+        width: 90%;
+        height: 90%;
+        border-radius: 7px;
+        border-color:cornflowerblue;
+    }
+
+        td button div {
+            color: red;
+        }
+
+#djo
+{
+    color:blue;
 }
