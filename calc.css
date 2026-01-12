@@ -128,7 +128,8 @@
         }
 
 .display {
-    width: 100%;
+    /*width: 98%;*/
+    width: 384px;
     display: flex;
     justify-content: center;
     margin: 5px 0;
@@ -141,23 +142,77 @@
 
 
 /*-------------------------------------------*/
+.buttons {
+    display: flex;
+    justify-content: space-around;
+    padding: 8px 5px;
+}
+
 .memmory-buttons {
     display: flex;
     flex-direction: column;
+    /*justify-content:center;*/
+    align-items: center;
 }
 
-    .memmory-buttons > button {
-        width: 48px;
-        height: 44px;
-        margin: 5px;
+.buttons button {
+    width: 48px;
+    height: 40px;
+    border: solid 1px darkblue;
+    border-radius: 5px;
+    box-shadow: inset 0px -2px 5px 1px lightgray;
+}
+
+    .buttons button:hover {
+        box-shadow: inset 0px 0px 5px 0px #FFAA00;
     }
 
+    .buttons button:active {
+        background-color:lightgray;
+        box-shadow: inset 0px 0px 5px 1px gray;
+    }
+
+.memmory-buttons > button, .control-buttons > button {
+    color: red;
+    margin: 5px;
+}
+
+
 .battery {
-    width: 44px;
-    height: 44px;
+    width: 32px;
+    height: 32px;
+    margin: 8px;
     box-shadow: inset 1px 1px 0px 0px gray;
     border-right: solid 1px white;
     border-bottom: solid 1px white;
+}
+/*-------------------------------------------*/
+.control-and-digital-buttons {
+    width: 80%;
+}
+
+.control-buttons > button {
+    width: 86px;
+}
+
+.digital-buttons {
+    display: grid;
+    grid-template-rows: repeat(4,40px);
+    grid-template-columns: repeat(5,48px);
+    grid-gap: 9.9px 11.5px;
+    padding: 3.5px;
+}
+
+    .digital-buttons > button {
+        color: darkblue;
+    }
+
+    .digital-buttons > .operation-button {
+        color: red;
+    }
+
+button {
+    /*font-size: 16px;*/
 }
 /*-------------------------------------------*/
 .border-left {
