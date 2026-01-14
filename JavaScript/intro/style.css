@@ -1,9 +1,19 @@
 ﻿@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
 body {
     font-family: Roboto Condensed;
-    font-size: 48px;
+    font-size: 32px;
     /*background-color:lightskyblue;*/
     background-image: linear-gradient(to bottom right, lightskyblue, pink);
     /*height: 90vh;*/ /*Viiewport Height*/
     background-attachment: fixed;
+}
+
+summary {
+    font-size: 32px;
+    font-weight:500;
+}
+
+input {
+    font-size: 22px;
 }
