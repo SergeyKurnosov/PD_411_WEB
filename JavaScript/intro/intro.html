@@ -17,8 +17,42 @@
 
     <details>
         <summary>Power</summary>
-        .......
+        <input type="number" id="number-for-power" min=0 placeholder="Число" onchange="Power()" />
+        <input type="number" id="power-for-number" min=0 placeholder="Степень" onchange="Power()" />
+        <div id="power-result"></div>
     </details>
+
+    <details>
+        <summary>Fibonacci</summary>
+        <input type="number" id="number-max-fib" min=0 placeholder="Максимальное число" onchange="NumberMaxFib()" />
+        <div id="number-max-fib-result"></div>
+
+        <input type="number" id="number-count-fib" min=0 placeholder="Количество" onchange="NumberCountFib()" />
+        <div id="number-count-fib-result"></div>
+    </details>
+
+    <details>
+        <summary>Number System</summary>
+        <input type="number" id="decimal-to-binary" min=0 placeholder="Десятичное в двоичное" onchange="decimalToBinary()" />
+        <div id="decimal-to-binary-result"></div>
+
+        <input type="number" id="decimal-to-hexadecimal" min=0 placeholder="Десятичное в шестнадцатеричное" onchange="decimalToHexadecimal()" />
+        <div id="decimal-to-hexadecimal-result"></div>
+
+        <input type="number" id="binary-to-decimal" min=0 placeholder="Двоичное в десятичное" onchange="binaryToDecimal()" />
+        <div id="binary-to-decimal-result"></div>
+
+        <input type="text" id="hexadecimal-to-decimal" min=0 placeholder="Шестнадцатеричное в десятичное" onchange="hexadecimalToDecimal()" />
+        <div id="hexadecimal-to-decimal-result"></div>
+
+        <input type="text" id="binary-to-hexadecimal" min=0 placeholder="Двоичное в шестнадцатеричное" onchange="binaryToHexadecimal()" />
+        <div id="binary-to-hexadecimal-result"></div>
+
+    </details>
+
+
+
+
 
     <script src="script.js"></script>
     <script>
