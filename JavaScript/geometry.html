@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Geometry</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Geometry</h2>
+    <details>
+        <summary>Cube</summary>
+        <input type="number" id="cube-size" min=0 max=30 placeholder="Размер куба" onchange="PrintCube()" />
+        <div id="cube-result"></div>
+    </details>
+
+    <details>
+        <summary>Triangle</summary>
+        <input type="number" id="triangle-size" min=0 max=30 placeholder="Размер треуголиника" />
+        <input type="number" id="triangle-num" min=1 max=4 placeholder="номер треуголиника" onchange="PrintTriangle()" />
+        <div id="triangle-result"></div>
+    </details>
+
+    <details>
+        <summary>Rhombus</summary>
+        <input type="number" id="rhombus-size" min=0 max=30 placeholder="Размер ромба" onchange="PrintRhombus()" />
+        <div id="rhombus-result"></div>
+    </details>
+
+    <details>
+        <summary>ChesBoard</summary>
+        <input type="number" id="chessboard-size" min=0 max=30 placeholder="Размер шахматной доски" onchange="PrintChesBoard()" />
+        <div id="chessboard-result"></div>
+    </details>
+
+    <details>
+        <summary>Pascal</summary>
+        <input type="number" id="pascal-size" min=0 max=30 placeholder="Размер треугольника" onchange="PrintPascal()" />
+        <div id="pascal-result"></div>
+    </details>
+
+
+
+    <script src="geometryScript.js"></script>
+</body>
+</html>
