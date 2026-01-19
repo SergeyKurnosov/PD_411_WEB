@@ -20,17 +20,23 @@ function setBackgound() {
 }
 
 function switchBacsground() {
-    let target = document.getElementById("switch-backround").src;
-    let path = target.split('/');
-    let file = path[path.length - 1];
+    /*let target = document.getElementById("switch-backround").src;*/
+    /*let path = target.split('/');*/
+    /*let file = path[path.length - 1];*/
+    ////////////////////////////////////////////////////////////
+
     // console.log(file);
     //if (file === "moon.png") target = "img/sun.png";
     //else target = "img/moon.png";
     //document.getElementById("switch-backround").src = target;
     // document.getElementById("switch-backround").src = file === "moon.png" ? "img/sun.png" : "img/moon.png";
-   // document.body.style.backgroundImage = "none";
-    document.body.className = file === "moon.png" ? "dark" : "white";
+    // document.body.style.backgroundImage = "none";
+    let delay = document.getElementById("delay").value;
+    document.body.style.transition = `background-color ${delay}s, color ${delay}s`;
+    document.getElementById("switch-backround").style.transition = `backgroung-image ${delay}s, filter ${delay}s`;
+    document.body.className = document.body.className === "dark" ? "white" : "dark";
+    //document.body.className = file === "moon.png" ? "dark" : "white";
    // document.body.style.backgroundColor = file === "moon.png" ? "black" : "white";
    // document.body.style.color = file === "moon.png" ? "white" : "black";
-    document.getElementById("switch-backround").src = `img/${file === "moon.png" ? "sun.png" : "moon.png"}`;
+    //document.getElementById("switch-backround").src = `img/${file === "moon.png" ? "sun.png" : "moon.png"}`;
 }

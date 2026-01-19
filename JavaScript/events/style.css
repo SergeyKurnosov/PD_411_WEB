@@ -4,7 +4,7 @@ body {
     font-family: Roboto Condensed;
     font-size: 32px;
     /*background-color:lightskyblue;*/
-    background-image: linear-gradient(to bottom right, lightskyblue, pink);
+    /*background-image: linear-gradient(to bottom right, lightskyblue, pink);*/
     /*height: 90vh;*/ /*Viiewport Height*/
     background-attachment: fixed;
 }
@@ -18,28 +18,50 @@ input {
     font-size: 22px;
 }
 /*----------------------------------------------------------------*/
-.dark
-{
-    background-image:none;
-    background-color:#323232;
-    color:#C8C8C8;
+
+.dark {
+    /*transition: all 3s ease;*/
+    /*background-image: none;*/
+    background-color: #323232;
+    color: #C8C8C8;
+    /*transition: color 3s, background-image 3s;*/
+    background-attachment: fixed;
 }
+
+    .dark #switch-backround {
+        background-image:url("img/sun.png");
+        filter: brightness(0) invert(1);
+    }
 
 .white {
-    background-image: linear-gradient(to bottom right, lightskyblue, pink);
-    background-attachment: fixed;
+    /*transition: all 3s ease;*/
+    /*    background-image: linear-gradient(to bottom right, lightskyblue, pink);
+    background-attachment: fixed;*/
     color: black;
+    /*transition: color 3s, background-image 3s;*/
+    background-attachment: fixed;
+    background-color: #C8C8C8;
+    /*    transition: color 3s;
+    transition: background-image 3s;*/
 }
 
-#header{
-    padding:15px;
-    display:flex;
-    justify-content:space-between;
+
+.white #switch-backround {
+    background-image: url("img/moon.png");
+    filter: brightness(0) invert(1);
+}
+
+#header {
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
 }
 
 #switch-backround /*> img*/ {
     width: 32px;
     height: 32px;
+    margin:0px 16px;
+    background-size:32px 32px;
 }
 /*----------------------------------------------------------------*/
 
@@ -60,6 +82,6 @@ input {
 }
 
 #color-sample {
-/*    width:200px;
+    /*    width:200px;
     height:200px;*/
 }
