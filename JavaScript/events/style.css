@@ -6,7 +6,7 @@ body {
     /*background-color:lightskyblue;*/
     /*background-image: linear-gradient(to bottom right, lightskyblue, pink);*/
     /*height: 90vh;*/ /*Viiewport Height*/
-    background-attachment: fixed;
+    /*background-attachment: fixed;*/
 }
 
 summary {
@@ -48,7 +48,7 @@ input {
 
 .white #switch-backround {
     background-image: url("img/moon.png");
-    filter: brightness(0) invert(1);
+    /*filter: brightness(0) invert(1);*/
 }
 
 #header {
@@ -81,7 +81,3 @@ input {
     height: 300px;
 }
 
-#color-sample {
-    /*    width:200px;
-    height:200px;*/
-}
