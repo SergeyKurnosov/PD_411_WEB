@@ -1,0 +1,94 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Nabla&family=Rubik+Broken+Fax&display=swap');
+
+
+body {
+    background-color: #32A2AE;
+    font-family: Rubik Broken Fax Static;
+    align-items: center;
+    display: flex;
+}
+
+div {
+    font-family: "Rubik Broken Fax", system-ui;
+}
+
+.clock-frame {
+    margin-top:0px;
+    padding-left: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+    background-color: #8F9F60;
+    border-radius: 100px;
+    box-shadow: 0 0 20px 15px #f4a460;
+    border: 5px solid #f4a460;
+    font-size: 3em;
+    color: #00f2fe;
+    letter-spacing: 2px;
+}
+
+    .clock-frame input {
+        height: 40px;
+        width: 40px;
+    }
+
+#time {
+    width: 270px;
+    position: fixed;
+    top: 0;
+    left: calc(100% - 300px);
+}
+
+#date {
+    width: 370px;
+}
+
+.gradient-text {
+    width: 90%;
+    height: 100%;
+    background: linear-gradient( 45deg, #304D31 10%, #6D711C 20%, #304D31 30%, #6D711C 40%);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+
+.clock {
+    width: 250px;
+    height: 250px;
+    background: #8F9F60;
+    border-radius: 50%;
+    box-shadow: 0 0 20px 20px #f4a460;
+    padding: 1px;
+    position: fixed;
+    top:0;
+    left: calc(100% - 250px);
+}
+
+.arrow {
+    margin: auto;
+    background-color: black;
+    transform-origin: bottom center;
+}
+
+#hour {
+    position: absolute;
+    width: 6px;
+    height: 80px;
+    margin-left: 122px;
+    margin-top: 45px;
+}
+
+#minute {
+    position: absolute;
+    width: 4px;
+    height: 100px;
+    margin-left: 123px;
+    top: 25px;
+}
+
+#second {
+    position: absolute;
+    width: 2px;
+    height: 120px;
+    margin-left: 124px;
+    top: 5px;
+}
