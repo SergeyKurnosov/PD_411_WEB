@@ -129,9 +129,9 @@ function tickCountdown() {
     const SECONDS_PER_MINUTE = 60;
     const SECONDS_PER_HOUR = 3600;
     const SECONDS_PER_DAY = 86400;
-    const SECONDS_PER_WEEK = SECONDS_PER_DAY * 7; // 604 800
-    const DAYS_PER_MONTH = 365.25 / 12;  // 30,4375
-    const SECONDS_PER_MONTH = SECONDS_PER_DAY * DAYS_PER_MONTH; // 2 629 800
+    const SECONDS_PER_WEEK = SECONDS_PER_DAY * 7; 
+    const DAYS_PER_MONTH = 365.25 / 12;  
+    const SECONDS_PER_MONTH = SECONDS_PER_DAY * DAYS_PER_MONTH; 
     const SECONDS_PER_YEAR = SECONDS_PER_DAY * 365 + SECONDS_PER_HOUR * 6;
 
     /////////////////////////////////////////////////////////////////////////////////////////////////
