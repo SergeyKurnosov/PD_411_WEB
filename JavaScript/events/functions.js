@@ -102,8 +102,8 @@ function tickCountdown() {
     let targetDateValue = targetDateControl.valueAsDate;
     let targetTimeValue = targetTimeControl.valueAsDate;
     // выравниваем часовой пояс
-    targetDateValue.setHours(targetDateValue.getHours() + targetDateValue.getTimezoneOffset()/60);
-    targetTimeValue.setHours(targetTimeValue.getHours() + targetTimeValue.getTimezoneOffset()/60);
+    targetDateValue.setHours(targetDateValue.getHours() + targetDateValue.getTimezoneOffset() / 60);
+    targetTimeValue.setHours(targetTimeValue.getHours() + targetTimeValue.getTimezoneOffset() / 60);
 
 
     document.getElementById("duration").innerHTML = typeof (targetDateValue);
@@ -124,15 +124,56 @@ function tickCountdown() {
     let timestamp = Math.trunc(duration / 1000);
     document.getElementById("timestamp").innerHTML = timestamp;
 
+    let timestamp_local = 0;
+
     const SECONDS_PER_MINUTE = 60;
     const SECONDS_PER_HOUR = 3600;
     const SECONDS_PER_DAY = 86400;
-    const SECONDS_PER_WEEK = SECONDS_PER_DAY * 7;
-    const DAYS_PER_MONTH = 365.25 / 12;
-    const SECONDS_PER_MONTH = SECONDS_PER_DAY * DAYS_PER_MONTH;
-    const SECONDS_PER_YEAR = SECONDS_PER_DAY + 365 + SECONDS_PER_HOUR * 6;
+    const SECONDS_PER_WEEK = SECONDS_PER_DAY * 7; // 604 800
+    const DAYS_PER_MONTH = 365.25 / 12;  // 30,4375
+    const SECONDS_PER_MONTH = SECONDS_PER_DAY * DAYS_PER_MONTH; // 2 629 800
+    const SECONDS_PER_YEAR = SECONDS_PER_DAY * 365 + SECONDS_PER_HOUR * 6;
 
+    /////////////////////////////////////////////////////////////////////////////////////////////////
 
+    if (timestamp >= SECONDS_PER_YEAR) {
+        timestamp_local = Math.floor(timestamp / SECONDS_PER_YEAR);
+        timestamp -= SECONDS_PER_YEAR * timestamp_local;
+        document.getElementById("years-unit").innerHTML = timestamp_local;
+    } else
+        document.getElementById("years-unit").innerHTML = "_";
+
+    if (timestamp >= SECONDS_PER_MONTH) {
+        timestamp_local = Math.floor(timestamp / SECONDS_PER_MONTH);
+        timestamp -= SECONDS_PER_MONTH * timestamp_local;
+        document.getElementById("months-unit").innerHTML = timestamp_local;
+    } else
+        document.getElementById("months-unit").innerHTML = "_";
+
+    if (timestamp >= SECONDS_PER_DAY) {
+        timestamp_local = Math.floor(timestamp / SECONDS_PER_DAY);
+        timestamp -= SECONDS_PER_DAY * timestamp_local;
+        document.getElementById("days-unit").innerHTML = timestamp_local;// 786 940
+
+    } else
+        document.getElementById("days-unit").innerHTML = "_";
+
+    if (timestamp >= SECONDS_PER_HOUR) {
+        timestamp_local = Math.floor(timestamp / SECONDS_PER_HOUR);
+        timestamp -= SECONDS_PER_HOUR * timestamp_local;
+        document.getElementById("hours-unit").innerHTML = timestamp_local;
+    } else
+        document.getElementById("hours-unit").innerHTML = "_";
+
+    if (timestamp >= SECONDS_PER_MINUTE) {
+        timestamp_local = Math.floor(timestamp / SECONDS_PER_MINUTE);
+        timestamp -= SECONDS_PER_MINUTE * timestamp_local;
+        document.getElementById("minutes-unit").innerHTML = timestamp_local;
+    } else
+        document.getElementById("minutes-unit").innerHTML = "_";
+
+    if (timestamp >= 0)
+        document.getElementById("seconds-unit").innerHTML = timestamp;
 
 
     setTimeout(tickCountdown, 100);
