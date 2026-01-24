@@ -100,12 +100,17 @@ input {
     color:rgb(200,0,0);
     height:148px;
     background-color:Highlight;
+    text-align:center;
+    display:flex;
+    align-items:center;
+    justify-content:center;
 }
 
 .time-marker{
     border:solid 1px;
     background-color:darkred;
     color:Aliceblue;
+    text-align:center;
 }
 
 
