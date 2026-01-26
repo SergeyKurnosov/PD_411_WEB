@@ -93,27 +93,27 @@ document.getElementById("btn-start").onclick = function startCountdownTimer() {
         clearTimeout(tickCountdown);
     }
 
-    let display = document.getElementById("display");
-    /////////////////////////////////////////////////////
-    let append = document.createElement("div");
-    append.id = "appended";
-    append.innerHTML = "Appended element";
-    display.append(append);
-    ////////////////////////////////////////////////
-    let prepend = document.createElement("div");
-    prepend.id = "prepended";
-    prepend.innerHTML = "Prepended element";
-    display.prepend(prepend);
-    ////////////////////////////////////////////////
-    let before = document.createElement("h3");
-    before.id = "before-display";
-    before.innerHTML = "Time left since the beginning";
-    display.before(before);
-    ////////////////////////////////////////////////
-    let after = document.createElement("h4");
-    after.id = "paradise";
-    after.innerHTML = "—юда нужно прикрутить музон";
-    display.after(after);
+    //let display = document.getElementById("display");
+    ///////////////////////////////////////////////////////
+    //let append = document.createElement("div");
+    //append.id = "appended";
+    //append.innerHTML = "Appended element";
+    //display.append(append);
+    //////////////////////////////////////////////////
+    //let prepend = document.createElement("div");
+    //prepend.id = "prepended";
+    //prepend.innerHTML = "Prepended element";
+    //display.prepend(prepend);
+    //////////////////////////////////////////////////
+    //let before = document.createElement("h3");
+    //before.id = "before-display";
+    //before.innerHTML = "Time left since the beginning";
+    //display.before(before);
+    //////////////////////////////////////////////////
+    //let after = document.createElement("h4");
+    //after.id = "paradise";
+    //after.innerHTML = "—юда нужно прикрутить музон";
+    //display.after(after);
 }
 
 function tickCountdown() {
@@ -173,9 +173,9 @@ function tickCountdown() {
     }
     else removeTimeBlock("years");
 
-    let monts = Math.floor(date / SECONDS_PER_MONTH);
-    if (monts > 0) {
-        let display = document.getElementById("display");
+    let months = Math.floor(date / SECONDS_PER_MONTH);
+    if (months > 0) {
+      //  let display = document.getElementById("display");
         date = date % SECONDS_PER_MONTH;
         let months_unit = document.getElementById("months-unit");
         if (months_unit == null) {
@@ -184,8 +184,34 @@ function tickCountdown() {
             hours_block.before(months_block);
         }
         else months_unit.innerHTML = addLeadingZero(months);
-
     }
+    else removeTimeBlock("months");
+
+    let weeks = Math.floor(date / SECONDS_PER_WEEK);
+    if (weeks > 0) {
+        let weeks_unit = document.getElementById("weeks-unit");
+        date = date % SECONDS_PER_WEEK;
+        if (weeks_unit == null) {
+            weeks_block = createTimeBlock("weeks", addLeadingZero(weeks));
+            let hours_block = document.getElementById("hours-unit").parentElement;
+            hours_block.before(weeks_block);
+        }
+        else weeks_unit.innerHTML = addLeadingZero(weeks);
+    }
+    else removeTimeBlock("weeks");
+
+    let days = Math.floor(date / SECONDS_PER_DAY);
+    if (days > 0) {
+        let days_unit = document.getElementById("days-unit");
+        if (days_unit == null) {
+            days_block = createTimeBlock("days", addLeadingZero(days));
+            let hours_block = document.getElementById("hours-unit").parentElement;
+            hours_block.before(days_block);
+        }
+        else days_unit.innerHTML = addLeadingZero(days);
+    }
+    else removeTimeBlock("days");
+    /////////////////////////////////////////////////////////////////////////////////////////////
 
 
     let hours = Math.floor(time_of_day / SECONDS_PER_HOUR);
