@@ -91,6 +91,7 @@ document.getElementById("btn-start").onclick = function startCountdownTimer() {
         btnStart.value = "Start";
         targertDate.disabled = targertTime.disabled = false;
         clearTimeout(tickCountdown);
+        resetDisplay(); // это должо быть в if
     }
 
     //let display = document.getElementById("display");
@@ -118,6 +119,7 @@ document.getElementById("btn-start").onclick = function startCountdownTimer() {
 
 function tickCountdown() {
 
+    if (document.getElementById("btn-start").value === "Start") return;
     let now = new Date();
 
     let targetDateControl = document.getElementById("target-date");
@@ -237,7 +239,7 @@ function tickCountdown() {
     //if (timestamp > 0 && document.getElementById("btn-start").value === "Stop")
     if ( document.getElementById("btn-start").value === "Stop")
         setTimeout(tickCountdown, 100);
-    if (timestamp > 0) {
+    if (timestamp == 0) {
         let player = document.getElementById("player");
         player.play();
     }
@@ -271,6 +273,19 @@ function removeTimeBlock(name) {
         let display = block.parentElement;
         display.removeChild(block);
     }
+}
+
+function resetDisplay() {
+    let display = document.getElementById("display");
+    //display.innerHTML = "";
+    console.log(display.children.length);
+    let children = display.children;
+    console.log(children);
+    console.log(display.children[0]);
+    while (display.children[0].children[0].id != "hourse-unit") {
+        display.children[0].remove();
+    }
+   // removeTimeBlock("days");
 }
 
 
