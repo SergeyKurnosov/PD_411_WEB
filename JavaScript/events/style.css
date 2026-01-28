@@ -3,10 +3,6 @@
 body {
     font-family: Roboto Condensed;
     font-size: 32px;
-    /*background-color:lightskyblue;*/
-    /*background-image: linear-gradient(to bottom right, lightskyblue, pink);*/
-    /*height: 90vh;*/ /*Viiewport Height*/
-    /*background-attachment: fixed;*/
 }
 
 summary {
@@ -20,11 +16,8 @@ input {
 /*----------------------------------------------------------------*/
 
 .dark {
-    /*transition: all 3s ease;*/
-    /*background-image: none;*/
     background-color: #323232;
     color: #C8C8C8;
-    /*transition: color 3s, background-image 3s;*/
     background-attachment: fixed;
 }
 
@@ -34,21 +27,14 @@ input {
     }
 
 .white {
-    /*transition: all 3s ease;*/
-    /*    background-image: linear-gradient(to bottom right, lightskyblue, pink);
-    background-attachment: fixed;*/
     color: black;
-    /*transition: color 3s, background-image 3s;*/
     background-attachment: fixed;
     background-color: #C8C8C8;
-    /*    transition: color 3s;
-    transition: background-image 3s;*/
 }
 
 
 .white #switch-backround {
     background-image: url("img/moon.png");
-    /*filter: brightness(0) invert(1);*/
 }
 
 #header {

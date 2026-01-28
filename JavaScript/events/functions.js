@@ -1,4 +1,4 @@
-// JavaScript source code
+п»ї// JavaScript source code
 
 function setImage() {
     let filename = document.getElementById("image-file");
@@ -12,33 +12,16 @@ function setImage() {
 function setBackgound() {
     let color_tool = document.getElementById("choose-color");
     let color = color_tool.value;
-    // document.body.style.backgroundImage = "none";
-    // document.body.style.backgroundColor = color;
     document.getElementById("color-sample").style.backgroundColor = color;
     document.getElementById("color-sample").style.width = "200px";
     document.getElementById("color-sample").style.height = "200px";
 }
 
 function switchBacsground() {
-    /*let target = document.getElementById("switch-backround").src;*/
-    /*let path = target.split('/');*/
-    /*let file = path[path.length - 1];*/
-    ////////////////////////////////////////////////////////////
-
-    // console.log(file);
-    //if (file === "moon.png") target = "img/sun.png";
-    //else target = "img/moon.png";
-    //document.getElementById("switch-backround").src = target;
-    // document.getElementById("switch-backround").src = file === "moon.png" ? "img/sun.png" : "img/moon.png";
-    // document.body.style.backgroundImage = "none";
     let delay = document.getElementById("delay").value;
     document.body.style.transition = `background-color ${delay}s, color ${delay}s`;
     document.getElementById("switch-backround").style.transition = `backgroung-image ${delay}s, filter ${delay}s`;
     document.body.className = document.body.className === "dark" ? "white" : "dark";
-    //document.body.className = file === "moon.png" ? "dark" : "white";
-    // document.body.style.backgroundColor = file === "moon.png" ? "black" : "white";
-    // document.body.style.color = file === "moon.png" ? "white" : "black";
-    //document.getElementById("switch-backround").src = `img/${file === "moon.png" ? "sun.png" : "moon.png"}`;
 }
 
 document.addEventListener
@@ -91,30 +74,8 @@ document.getElementById("btn-start").onclick = function startCountdownTimer() {
         btnStart.value = "Start";
         targertDate.disabled = targertTime.disabled = false;
         clearTimeout(tickCountdown);
-        resetDisplay(); // это должо быть в if
+        resetDisplay(); // СЌС‚Рѕ РґРѕР»Р¶Рѕ Р±С‹С‚СЊ РІ if
     }
-
-    //let display = document.getElementById("display");
-    ///////////////////////////////////////////////////////
-    //let append = document.createElement("div");
-    //append.id = "appended";
-    //append.innerHTML = "Appended element";
-    //display.append(append);
-    //////////////////////////////////////////////////
-    //let prepend = document.createElement("div");
-    //prepend.id = "prepended";
-    //prepend.innerHTML = "Prepended element";
-    //display.prepend(prepend);
-    //////////////////////////////////////////////////
-    //let before = document.createElement("h3");
-    //before.id = "before-display";
-    //before.innerHTML = "Time left since the beginning";
-    //display.before(before);
-    //////////////////////////////////////////////////
-    //let after = document.createElement("h4");
-    //after.id = "paradise";
-    //after.innerHTML = "Сюда нужно прикрутить музон";
-    //display.after(after);
 }
 
 function tickCountdown() {
@@ -127,7 +88,7 @@ function tickCountdown() {
 
     let targetDateValue = targetDateControl.valueAsDate;
     let targetTimeValue = targetTimeControl.valueAsDate;
-    // выравниваем часовой пояс
+    // РІС‹СЂР°РІРЅРёРІР°РµРј С‡Р°СЃРѕРІРѕР№ РїРѕСЏСЃ
     targetDateValue.setHours(targetDateValue.getHours() + targetDateValue.getTimezoneOffset() / 60);
     targetTimeValue.setHours(targetTimeValue.getHours() + targetTimeValue.getTimezoneOffset() / 60);
 
@@ -141,14 +102,11 @@ function tickCountdown() {
     document.getElementById("target-time-value").innerHTML = targetTimeValue;
     document.getElementById("current-time-value").innerHTML = now;
 
-
-    //console.log(`${targetDateValue} ${targetTimeValue}`);
-
     let duration = targetTimeValue - now;
     document.getElementById("duration").innerHTML = duration;
 
     let timestamp = Math.trunc(duration / 1000);
-    document.getElementById("signature").innerHTML = timestamp > 0 ? "Времени осталось" : "Времени прошло";
+    document.getElementById("signature").innerHTML = timestamp > 0 ? "Р’СЂРµРјРµРЅРё РѕСЃС‚Р°Р»РѕСЃСЊ" : "Р’СЂРµРјРµРЅРё РїСЂРѕС€Р»Рѕ";
     if (timestamp < 0) timestamp = -timestamp;
     document.getElementById("timestamp").innerHTML = timestamp;
 
@@ -170,14 +128,9 @@ function tickCountdown() {
         date = date % SECONDS_PER_YEAR;
         let years_unit = document.getElementById("years-unit");
         if (years_unit == null) {
-          // let display = document.getElementById("display");
-            // display.prepend(createTimeBlock("years", addLeadingZero(years)));
-
-            //????????????
             let years_block = createTimeBlock("years", years);
             let hours_block = document.getElementById("hours-unit").parentElement;
             hours_block.before(years_block);
-            //????????????
         }
         else years_unit.innerHTML = addLeadingZero(years);
     }
@@ -185,7 +138,6 @@ function tickCountdown() {
 
     let months = Math.floor(date / SECONDS_PER_MONTH);
     if (months > 0) {
-      //  let display = document.getElementById("display");
         date = date % SECONDS_PER_MONTH;
         let months_unit = document.getElementById("months-unit");
         if (months_unit == null) {
@@ -236,7 +188,6 @@ function tickCountdown() {
     document.getElementById("minutes-unit").innerHTML = addLeadingZero(minutes);
     document.getElementById("seconds-unit").innerHTML = addLeadingZero(seconds);
 
-    //if (timestamp > 0 && document.getElementById("btn-start").value === "Stop")
     if ( document.getElementById("btn-start").value === "Stop")
         setTimeout(tickCountdown, 100);
     if (timestamp == 0) {
@@ -277,15 +228,13 @@ function removeTimeBlock(name) {
 
 function resetDisplay() {
     let display = document.getElementById("display");
-    //display.innerHTML = "";
     console.log(display.children.length);
     let children = display.children;
     console.log(children);
     console.log(display.children[0]);
-    while (display.children[0].children[0].id != "hourse-unit") {
+    while (display.children[0].children[0].id != "hours-unit") {
         display.children[0].remove();
     }
-   // removeTimeBlock("days");
 }
 
 
