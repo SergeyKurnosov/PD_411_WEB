@@ -7,11 +7,26 @@
     <link rel="stylesheet" href="domanimation.css" />
 </head>
 <body>
-    <h1>Document Object Model Animation</h1>
-    <div id="container" onclick="Move()">
-        <div id="animation">Document Object Model Animation</div>
+    <div style="display:flex">
+        <input type="number" id="interval" min="1" max="60" value="5" /><label for="interval">Interval</label>
+        <input type="number" id="fontSize" min="1" max="60" value="30" /><label for="fontSize">Font size</label>
     </div>
-    <input type="number"id="interval" min="1" max="60" value="5" /><label for="interval">Interval</label>
+    <div id="animation" onclick="Move()">
+        <div id="display">
+            <div class="time-block">
+                <div id="hours-unit" class="time-unit">00</div>
+                <div id="hours-marker" class="time-marker">Hours:</div>
+            </div>
+            <div class="time-block">
+                <div id="minutes-unit" class="time-unit">00</div>
+                <div id="minutes-marker" class="time-marker">Minutes:</div>
+            </div>
+            <div class="time-block">
+                <div id="seconds-unit" class="time-unit">00</div>
+                <div id="seconds-marker" class="time-marker">Seconds</div>
+            </div>
+        </div>
+    </div>
     <script src="domanimation.js"></script>
 </body>
 </html>

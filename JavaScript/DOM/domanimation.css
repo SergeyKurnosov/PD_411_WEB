@@ -1,14 +1,32 @@
-﻿#container {
-    width: 400px;
-    height: 400px;
-    position: relative;
-    background: yellow;
+﻿
+#animation {
+
+    position: absolute;
+
 }
 
-#animation {
-    width: 150px;
-    height: 50px;
-    position: absolute;
-    background: red;
-    color:yellow;
+#display {
+    display: flex;
+    justify-content: space-around;
 }
+
+.time-block {
+
+}
+
+.time-unit {
+    color: rgb(200,0,0);
+    background-color: Highlight;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.time-marker {
+    background-color: darkred;
+    color: Aliceblue;
+    text-align: center;
+}
+
+
