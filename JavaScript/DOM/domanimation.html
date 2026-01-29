@@ -5,13 +5,25 @@
     <meta charset="utf-8" />
     <title>DOM Ani</title>
     <link rel="stylesheet" href="domanimation.css" />
+
 </head>
 <body>
-    <h1>Document Object Model Animation</h1>
+
+    <div class="container" onclick="Move()">
+        <div class="back side"></div>
+        <div class="left side"></div>
+        <div class="right side"></div>
+        <div class="top side"></div>
+        <div class="bottom side"></div>
+        <div class="front side"></div>
+        <div id="animation">*</div>
+
+    </div>
+    <!--<h1>Document Object Model Animation</h1>
     <div id="container" onclick="Move()">
         <div id="animation">Document Object Model Animation</div>
     </div>
-    <input type="number"id="interval" min="1" max="60" value="5" /><label for="interval">Interval</label>
+    <input type="number"id="interval" min="1" max="60" value="5" /><label for="interval">Interval</label>-->
     <script src="domanimation.js"></script>
 </body>
 </html>
