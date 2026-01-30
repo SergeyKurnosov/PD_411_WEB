@@ -7,34 +7,33 @@
     <link rel="stylesheet" href="myTimer.css" />
 </head>
 <body>
-    <!--<form>
-        <label for="city-select">Ваш город</label>
-        <select name="city" id="city-select">
-            <option value="">-- Выберите город --</option>
-            <option value="petersburg">Санкт-Петербург</option>
-            <option value="samara">Самара</option>
-            <option value="perm">Пермь</option>
-            <option value="novosibirsk">Новосибирск</option>
-        </select>
-    </form>-->
 
-    <!--<div id="block-for-select-date">
-        <details>
-            <summary>Select date and time</summary>
-
-
-
-        </details>
-
-    </div>-->
+    <div id="countdown-timer" class="inp">
+        <input type="date" id="target-date" value="2026-02-23" />
+        <input type="time" id="target-time" value="00:00" />
+    </div>
 
     <div id="display">
-        <div id="YYYY">YYYY</div>-
-        <div id="MM">MM</div>-
-        <div id="DD">DD</div>-
-        <div id="hh">hh</div>-
-        <div id="mm">mm</div>-
+        <div id="YYYY">YYYY</div>
+        <div id="MM">MM</div>
+        <div id="DD">DD</div>
+        <div id="hh">hh</div>
+        <div id="mm">mm</div>
         <div id="ss">ss</div>
+    </div>
+    <div id="display">
+        <div id="YYYY_m">YYYY</div>
+        <div id="MM_m">MM</div>
+        <div id="DD_m">DD</div>
+        <div id="hh_m">hh</div>
+        <div id="mm_m">mm</div>
+        <div id="ss_m">ss</div>
+    </div>
+    <div>
+        <select id="playlist"></select>
+        <audio controls id="player" style="width:50%">
+            <source src="sound/13. Metaphor.mp3" />
+        </audio>
     </div>
     <button class="btn-class-name" id="btn">
         <span class="back" id="back"></span>
