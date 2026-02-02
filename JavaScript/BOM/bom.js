@@ -1,5 +1,12 @@
 ﻿// JavaScript source code
 
+confirm("Это окно 'Confirm'");
+confirm("Это окно 'Confirm'");
+
+
+
+
+
 function GetWindowSize() {
     let window_with = window.innerWidth;
     let window_height = window.innerHeight;
