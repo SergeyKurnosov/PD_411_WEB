@@ -1,74 +1,64 @@
 ﻿BODY {
     perspective: 1000px;
-    perspective-origin: center -5em;
+    perspective-origin: center 20em;
 }
 
 .side,
 .container {
-    width: 10em;
-    height: 10em;
+    width: 100%;
+    height: 100%;
 }
 
 .container {
     border: 2px dotted silver;
     transform-style: preserve-3d;
-    animation: rotate 10s infinite linear;
+    animation: rotate 20s infinite linear;
 }
-
-    .container:before,
-    .container:after {
-        content: "";
-        display: block;
-        position: absolute;
-        width: 10em;
-        height: 10em;
-        border: 2px dotted white;
-    }
-
-    .container:before {
-        transform: rotateX(90deg);
-    }
-
-    .container:after {
-        transform: rotateY(90deg);
-    }
-
 
 .side {
     position: absolute;
-    width: 10em;
-    height: 10em;
+    height: 100%;
     border: 1px solid orange;
     opacity: .7;
 }
 
+
 .back {
-    transform: translateZ(-5em);
+    transform: translateZ(-100em);
+    width:100%;
     background: orange;
 }
 
 .left {
-    transform: translateX(-5em) rotateY(90deg);
+    transform: translateX(-52.5em) translateZ(-47.5em) rotateY(90deg) ;
+    width: 105em;
     background: lightgreen;
 }
 
 .right {
-    transform: translateX(5em) rotateY(90deg);
+    transform: translateX(65em) translateZ(-47.5em) rotateY(90deg);
+    width: 105em;
     background: yellowgreen;
+    background-image: url("C:\Users\demom\OneDrive\Изображения\images.jpeg");
 }
 
 .top {
-    transform: translateY(-5em) rotateX(90deg);
+    transform: translateY(-52.5em) translateZ(-47.5em) rotateX(90deg);
+    height: 105em;
+    width: 100%;
     background: skyblue;
 }
 
 .bottom {
-    transform: translateY(5em) rotateX(90deg);
+    transform: translateY(7em) translateZ(-47.5em) rotateX(90deg);
+    height: 105em;
+    width: 100%;
     background: steelblue;
 }
 .front {
     perspective: 1000px;
     transform: translateZ(5em);
+    width: 100%;
     background: gold;
 }
 
@@ -89,17 +79,3 @@ BODY {
 }
 
 
-/*#container {
-    width: 400px;
-    height: 400px;
-    position: relative;
-    background: yellow;
-}*/
-
-#animation {
-    width: 2em;
-    height: 1em;
-    position: absolute;
-    background: red;
-    color:yellow;
-}
